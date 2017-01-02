@@ -9,9 +9,11 @@
 import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
+    let editorWindowController = EditorWindowController()
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        editorWindowController.showWindow(self)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

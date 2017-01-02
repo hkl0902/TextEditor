@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class EditorViewController: NSViewController {
+class EditorViewController: NSViewController, NSStackViewDelegate {
 
     var sideFolderViewController: NSViewController!
     var notesViewController: NSViewController!
@@ -19,8 +19,10 @@ class EditorViewController: NSViewController {
         notesViewController = NotesViewController()
         textEditorViewController = TextEditorViewController()
         
-        self.view = NSStackView(views: [sideFolderViewController.view, notesViewController.view, textEditorViewController.view])
-        
+        let stackView = NSStackView(views: [sideFolderViewController.view, notesViewController.view, textEditorViewController.view])
+        stackView.spacing = 0
+        stackView.distribution = .fill
+        self.view = stackView
         addConstraints()
     }
     
@@ -37,10 +39,12 @@ class EditorViewController: NSViewController {
         let textEditorViewConstraints = LayoutUtils.setSizeConstraint(item: self.textEditorViewController.view,
                                                                       minWidth: EditorLayoutConstants.MIN_TEXT_EDITOR_VIEW_WIDTH,
                                                                       minHeight: EditorLayoutConstants.MIN_TEXT_EDITOR_VIEW_HEIGHT)
+        // sets max size for sidefolderview
+        let testConstraint = NSLayoutConstraint(item: sideFolderViewController.view, attribute: .width, relatedBy: .lessThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 600)
         
         
-        NSLayoutConstraint.activate([sideFolderViewConstraints.heightConstraint, sideFolderViewConstraints.widthConstraint,
-                                     notesViewConstraints.heightConstraint, notesViewConstraints.widthConstraint,
+        NSLayoutConstraint.activate([sideFolderViewConstraints.heightConstraint, sideFolderViewConstraints.widthConstraint, testConstraint,
+                                     notesViewConstraints.heightConstraint, notesViewConstraints.widthConstraint, 
                                      textEditorViewConstraints.heightConstraint, textEditorViewConstraints.widthConstraint])
     }
 }
