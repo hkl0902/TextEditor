@@ -16,5 +16,4 @@ class NotesTableView: NSTableView {
         NSColor.red.setFill()
         NSRectFill(dirtyRect)
     }
-    
 }

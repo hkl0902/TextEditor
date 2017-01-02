@@ -18,5 +18,6 @@ class NotesViewController: NSViewController, NSTableViewDelegate {
 
     override func loadView() {
         self.view = NotesTableView()
+        self.view.wantsLayer = true
     }
 }

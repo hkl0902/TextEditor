@@ -17,5 +17,6 @@ class TextEditorViewController: NSViewController {
 
     override func loadView() {
         self.view = TextEditorView()
+        self.view.wantsLayer = true
     }
 }

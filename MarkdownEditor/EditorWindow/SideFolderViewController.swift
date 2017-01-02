@@ -17,6 +17,7 @@ class SideFolderViewController: NSViewController {
 
     override func loadView() {
         self.view = SideFolderView()
+        self.view.wantsLayer = true
     }
     
 }
