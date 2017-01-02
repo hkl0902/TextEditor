@@ -23,4 +23,24 @@ class EditorViewController: NSViewController {
         
         addConstraints()
     }
+    
+    private func addConstraints() {
+        // Side Folder View
+        let sideFolderViewConstraints = LayoutUtils.setSizeConstraint(item: self.sideFolderViewController.view,
+                                                                  minWidth: EditorLayoutConstants.MIN_SIDE_FOLDER_VIEW_WIDTH,
+                                                                  minHeight: EditorLayoutConstants.MIN_SIDE_FOLDER_VIEW_HEIGHT)
+        // Notes View
+        let notesViewConstraints = LayoutUtils.setSizeConstraint(item: self.notesViewController.view,
+                                                                 minWidth: EditorLayoutConstants.MIN_NOTES_VIEW_WIDTH,
+                                                                 minHeight: EditorLayoutConstants.MIN_NOTES_VIEW_HEIGHT)
+        // Text Editor View
+        let textEditorViewConstraints = LayoutUtils.setSizeConstraint(item: self.textEditorViewController.view,
+                                                                      minWidth: EditorLayoutConstants.MIN_TEXT_EDITOR_VIEW_WIDTH,
+                                                                      minHeight: EditorLayoutConstants.MIN_TEXT_EDITOR_VIEW_HEIGHT)
+        
+        
+        NSLayoutConstraint.activate([sideFolderViewConstraints.heightConstraint, sideFolderViewConstraints.widthConstraint,
+                                     notesViewConstraints.heightConstraint, notesViewConstraints.widthConstraint,
+                                     textEditorViewConstraints.heightConstraint, textEditorViewConstraints.widthConstraint])
+    }
 }
