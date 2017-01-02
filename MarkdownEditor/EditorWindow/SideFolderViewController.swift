@@ -15,9 +15,8 @@ import Cocoa
 
 class SideFolderViewController: NSViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
+    override func loadView() {
+        self.view = SideFolderView()
     }
     
 }

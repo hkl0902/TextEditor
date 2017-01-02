@@ -16,8 +16,7 @@ import Cocoa
 
 class NotesViewController: NSViewController, NSTableViewDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }    
+    override func loadView() {
+        self.view = NotesTableView()
+    }
 }
