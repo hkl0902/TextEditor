@@ -12,6 +12,15 @@
 		47278BA21E18521400E5E529 /* MarkdownEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278BA11E18521400E5E529 /* MarkdownEditorTests.swift */; };
 		47278BAD1E18521400E5E529 /* MarkdownEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278BAC1E18521400E5E529 /* MarkdownEditorUITests.swift */; };
 		47278BBB1E18527E00E5E529 /* AppMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278BBA1E18527E00E5E529 /* AppMainMenu.swift */; };
+		47821D781E1A23380009F3DC /* TextEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D761E1A23380009F3DC /* TextEditorViewController.swift */; };
+		47821D791E1A23380009F3DC /* EditorWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D771E1A23380009F3DC /* EditorWindowController.swift */; };
+		47821D7B1E1A23490009F3DC /* SideFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D7A1E1A23490009F3DC /* SideFolderViewController.swift */; };
+		47821D7D1E1A235E0009F3DC /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D7C1E1A235E0009F3DC /* NotesViewController.swift */; };
+		47821D7F1E1A236E0009F3DC /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D7E1E1A236E0009F3DC /* TextEditorView.swift */; };
+		47821D811E1A23760009F3DC /* SideFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D801E1A23760009F3DC /* SideFolderView.swift */; };
+		47821D831E1A237F0009F3DC /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D821E1A237F0009F3DC /* NotesView.swift */; };
+		47821D851E1A23B00009F3DC /* EditorWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D841E1A23B00009F3DC /* EditorWindow.swift */; };
+		47821D871E1A23D90009F3DC /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D861E1A23D90009F3DC /* EditorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +52,15 @@
 		47278BAC1E18521400E5E529 /* MarkdownEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownEditorUITests.swift; sourceTree = "<group>"; };
 		47278BAE1E18521400E5E529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47278BBA1E18527E00E5E529 /* AppMainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMainMenu.swift; sourceTree = "<group>"; };
+		47821D761E1A23380009F3DC /* TextEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextEditorViewController.swift; path = EditorWindow/TextEditorViewController.swift; sourceTree = "<group>"; };
+		47821D771E1A23380009F3DC /* EditorWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorWindowController.swift; path = EditorWindow/EditorWindowController.swift; sourceTree = "<group>"; };
+		47821D7A1E1A23490009F3DC /* SideFolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideFolderViewController.swift; path = EditorWindow/SideFolderViewController.swift; sourceTree = "<group>"; };
+		47821D7C1E1A235E0009F3DC /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = EditorWindow/NotesViewController.swift; sourceTree = "<group>"; };
+		47821D7E1E1A236E0009F3DC /* TextEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextEditorView.swift; path = EditorWindow/TextEditorView.swift; sourceTree = "<group>"; };
+		47821D801E1A23760009F3DC /* SideFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideFolderView.swift; path = EditorWindow/SideFolderView.swift; sourceTree = "<group>"; };
+		47821D821E1A237F0009F3DC /* NotesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesView.swift; path = EditorWindow/NotesView.swift; sourceTree = "<group>"; };
+		47821D841E1A23B00009F3DC /* EditorWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorWindow.swift; path = EditorWindow/EditorWindow.swift; sourceTree = "<group>"; };
+		47821D861E1A23D90009F3DC /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorViewController.swift; path = EditorWindow/EditorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +111,7 @@
 		47278B901E18521400E5E529 /* MarkdownEditor */ = {
 			isa = PBXGroup;
 			children = (
+				47821D731E1A22E90009F3DC /* Editor Window */,
 				47278B911E18521400E5E529 /* main.swift */,
 				47278BBA1E18527E00E5E529 /* AppMainMenu.swift */,
 				47278B931E18521400E5E529 /* Assets.xcassets */,
@@ -117,6 +136,22 @@
 				47278BAE1E18521400E5E529 /* Info.plist */,
 			);
 			path = MarkdownEditorUITests;
+			sourceTree = "<group>";
+		};
+		47821D731E1A22E90009F3DC /* Editor Window */ = {
+			isa = PBXGroup;
+			children = (
+				47821D771E1A23380009F3DC /* EditorWindowController.swift */,
+				47821D861E1A23D90009F3DC /* EditorViewController.swift */,
+				47821D841E1A23B00009F3DC /* EditorWindow.swift */,
+				47821D761E1A23380009F3DC /* TextEditorViewController.swift */,
+				47821D7A1E1A23490009F3DC /* SideFolderViewController.swift */,
+				47821D7C1E1A235E0009F3DC /* NotesViewController.swift */,
+				47821D7E1E1A236E0009F3DC /* TextEditorView.swift */,
+				47821D801E1A23760009F3DC /* SideFolderView.swift */,
+				47821D821E1A237F0009F3DC /* NotesView.swift */,
+			);
+			name = "Editor Window";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +289,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47821D7B1E1A23490009F3DC /* SideFolderViewController.swift in Sources */,
 				47278B921E18521400E5E529 /* main.swift in Sources */,
+				47821D7D1E1A235E0009F3DC /* NotesViewController.swift in Sources */,
+				47821D811E1A23760009F3DC /* SideFolderView.swift in Sources */,
+				47821D871E1A23D90009F3DC /* EditorViewController.swift in Sources */,
 				47278BBB1E18527E00E5E529 /* AppMainMenu.swift in Sources */,
+				47821D791E1A23380009F3DC /* EditorWindowController.swift in Sources */,
+				47821D781E1A23380009F3DC /* TextEditorViewController.swift in Sources */,
+				47821D7F1E1A236E0009F3DC /* TextEditorView.swift in Sources */,
+				47821D851E1A23B00009F3DC /* EditorWindow.swift in Sources */,
+				47821D831E1A237F0009F3DC /* NotesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +534,7 @@
 				47278BB31E18521400E5E529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47278BB41E18521400E5E529 /* Build configuration list for PBXNativeTarget "MarkdownEditorTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +543,7 @@
 				47278BB61E18521400E5E529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47278BB71E18521400E5E529 /* Build configuration list for PBXNativeTarget "MarkdownEditorUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +552,7 @@
 				47278BB91E18521400E5E529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
