@@ -14,11 +14,10 @@
 
 import Cocoa
 
-class NotesViewController: NSViewController {
+class NotesViewController: NSViewController, NSTableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-    }
-    
+    }    
 }

@@ -18,7 +18,7 @@
 		47821D7D1E1A235E0009F3DC /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D7C1E1A235E0009F3DC /* NotesViewController.swift */; };
 		47821D7F1E1A236E0009F3DC /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D7E1E1A236E0009F3DC /* TextEditorView.swift */; };
 		47821D811E1A23760009F3DC /* SideFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D801E1A23760009F3DC /* SideFolderView.swift */; };
-		47821D831E1A237F0009F3DC /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D821E1A237F0009F3DC /* NotesView.swift */; };
+		47821D831E1A237F0009F3DC /* NotesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D821E1A237F0009F3DC /* NotesTableView.swift */; };
 		47821D851E1A23B00009F3DC /* EditorWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D841E1A23B00009F3DC /* EditorWindow.swift */; };
 		47821D871E1A23D90009F3DC /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47821D861E1A23D90009F3DC /* EditorViewController.swift */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 		47821D7C1E1A235E0009F3DC /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = EditorWindow/NotesViewController.swift; sourceTree = "<group>"; };
 		47821D7E1E1A236E0009F3DC /* TextEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextEditorView.swift; path = EditorWindow/TextEditorView.swift; sourceTree = "<group>"; };
 		47821D801E1A23760009F3DC /* SideFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideFolderView.swift; path = EditorWindow/SideFolderView.swift; sourceTree = "<group>"; };
-		47821D821E1A237F0009F3DC /* NotesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesView.swift; path = EditorWindow/NotesView.swift; sourceTree = "<group>"; };
+		47821D821E1A237F0009F3DC /* NotesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesTableView.swift; path = EditorWindow/NotesTableView.swift; sourceTree = "<group>"; };
 		47821D841E1A23B00009F3DC /* EditorWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorWindow.swift; path = EditorWindow/EditorWindow.swift; sourceTree = "<group>"; };
 		47821D861E1A23D90009F3DC /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorViewController.swift; path = EditorWindow/EditorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,7 +149,7 @@
 				47821D7C1E1A235E0009F3DC /* NotesViewController.swift */,
 				47821D7E1E1A236E0009F3DC /* TextEditorView.swift */,
 				47821D801E1A23760009F3DC /* SideFolderView.swift */,
-				47821D821E1A237F0009F3DC /* NotesView.swift */,
+				47821D821E1A237F0009F3DC /* NotesTableView.swift */,
 			);
 			name = "Editor Window";
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 				47821D781E1A23380009F3DC /* TextEditorViewController.swift in Sources */,
 				47821D7F1E1A236E0009F3DC /* TextEditorView.swift in Sources */,
 				47821D851E1A23B00009F3DC /* EditorWindow.swift in Sources */,
-				47821D831E1A237F0009F3DC /* NotesView.swift in Sources */,
+				47821D831E1A237F0009F3DC /* NotesTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

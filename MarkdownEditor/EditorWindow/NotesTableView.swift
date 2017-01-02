@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class NotesView: NSView {
+class NotesTableView: NSTableView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
