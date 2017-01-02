@@ -142,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				47821D771E1A23380009F3DC /* EditorWindowController.swift */,
-				47821D861E1A23D90009F3DC /* EditorViewController.swift */,
 				47821D841E1A23B00009F3DC /* EditorWindow.swift */,
+				47821D861E1A23D90009F3DC /* EditorViewController.swift */,
 				47821D761E1A23380009F3DC /* TextEditorViewController.swift */,
 				47821D7A1E1A23490009F3DC /* SideFolderViewController.swift */,
 				47821D7C1E1A235E0009F3DC /* NotesViewController.swift */,

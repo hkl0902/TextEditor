@@ -10,9 +10,17 @@ import Cocoa
 
 class EditorViewController: NSViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
+    var sideFolderViewController: NSViewController!
+    var notesViewController: NSViewController!
+    var textEditorViewController: NSViewController!
     
+    override func loadView() {
+        sideFolderViewController = SideFolderViewController()
+        notesViewController = NotesViewController()
+        textEditorViewController = TextEditorViewController()
+        
+        self.view = NSStackView(views: [sideFolderViewController.view, notesViewController.view, textEditorViewController.view])
+        
+        addConstraints()
+    }
 }

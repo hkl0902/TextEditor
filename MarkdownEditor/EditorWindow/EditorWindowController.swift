@@ -21,10 +21,9 @@ import Cocoa
 
 class EditorWindowController: NSWindowController {
 
-    override func windowDidLoad() {
-        super.windowDidLoad()
-    
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    convenience init() {
+        let editorWindow = EditorWindow(contentViewController: EditorViewController())
+        self.init(window: editorWindow)        
     }
 
 }
