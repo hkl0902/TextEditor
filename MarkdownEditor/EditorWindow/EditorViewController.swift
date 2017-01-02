@@ -39,11 +39,9 @@ class EditorViewController: NSViewController, NSStackViewDelegate {
         let textEditorViewConstraints = LayoutUtils.setSizeConstraint(item: self.textEditorViewController.view,
                                                                       minWidth: EditorLayoutConstants.MIN_TEXT_EDITOR_VIEW_WIDTH,
                                                                       minHeight: EditorLayoutConstants.MIN_TEXT_EDITOR_VIEW_HEIGHT)
-        // sets max size for sidefolderview
-        let testConstraint = NSLayoutConstraint(item: sideFolderViewController.view, attribute: .width, relatedBy: .lessThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 600)
+
         
-        
-        NSLayoutConstraint.activate([sideFolderViewConstraints.heightConstraint, sideFolderViewConstraints.widthConstraint, testConstraint,
+        NSLayoutConstraint.activate([sideFolderViewConstraints.heightConstraint, sideFolderViewConstraints.widthConstraint,
                                      notesViewConstraints.heightConstraint, notesViewConstraints.widthConstraint, 
                                      textEditorViewConstraints.heightConstraint, textEditorViewConstraints.widthConstraint])
     }
