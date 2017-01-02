@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		47278B921E18521400E5E529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278B911E18521400E5E529 /* AppDelegate.swift */; };
+		47278B921E18521400E5E529 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278B911E18521400E5E529 /* main.swift */; };
 		47278B941E18521400E5E529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47278B931E18521400E5E529 /* Assets.xcassets */; };
-		47278B971E18521400E5E529 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47278B951E18521400E5E529 /* MainMenu.xib */; };
 		47278BA21E18521400E5E529 /* MarkdownEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278BA11E18521400E5E529 /* MarkdownEditorTests.swift */; };
 		47278BAD1E18521400E5E529 /* MarkdownEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278BAC1E18521400E5E529 /* MarkdownEditorUITests.swift */; };
+		47278BBB1E18527E00E5E529 /* AppMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278BBA1E18527E00E5E529 /* AppMainMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +33,8 @@
 
 /* Begin PBXFileReference section */
 		47278B8E1E18521400E5E529 /* MarkdownEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkdownEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		47278B911E18521400E5E529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		47278B911E18521400E5E529 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		47278B931E18521400E5E529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		47278B961E18521400E5E529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		47278B981E18521400E5E529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47278B9D1E18521400E5E529 /* MarkdownEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkdownEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47278BA11E18521400E5E529 /* MarkdownEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownEditorTests.swift; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 		47278BA81E18521400E5E529 /* MarkdownEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkdownEditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47278BAC1E18521400E5E529 /* MarkdownEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownEditorUITests.swift; sourceTree = "<group>"; };
 		47278BAE1E18521400E5E529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47278BBA1E18527E00E5E529 /* AppMainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMainMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +93,9 @@
 		47278B901E18521400E5E529 /* MarkdownEditor */ = {
 			isa = PBXGroup;
 			children = (
-				47278B911E18521400E5E529 /* AppDelegate.swift */,
+				47278B911E18521400E5E529 /* main.swift */,
+				47278BBA1E18527E00E5E529 /* AppMainMenu.swift */,
 				47278B931E18521400E5E529 /* Assets.xcassets */,
-				47278B951E18521400E5E529 /* MainMenu.xib */,
 				47278B981E18521400E5E529 /* Info.plist */,
 			);
 			path = MarkdownEditor;
@@ -230,7 +230,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				47278B941E18521400E5E529 /* Assets.xcassets in Resources */,
-				47278B971E18521400E5E529 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47278B921E18521400E5E529 /* AppDelegate.swift in Sources */,
+				47278B921E18521400E5E529 /* main.swift in Sources */,
+				47278BBB1E18527E00E5E529 /* AppMainMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,17 +289,6 @@
 			targetProxy = 47278BA91E18521400E5E529 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		47278B951E18521400E5E529 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47278B961E18521400E5E529 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		47278BAF1E18521400E5E529 /* Debug */ = {
