@@ -39,4 +39,33 @@ struct LayoutUtils {
         let heightConstraint = NSLayoutConstraint(item: item, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: minHeight)
         return (widthConstraint, heightConstraint)
     }
+
+    /**
+     Returns a tuple of NSLayoutConstraints
+     Species that ITEM must be a certain distance to TOITEM in each direction
+     Assumes that ITEM is complete inside TOITEM
+     If no distance is to be specified, nil should be passed. nil will be returned for that constraint
+     */
+    static func setDistanceConstraints(item: Any, toItem: Any, top: CGFloat?, right: CGFloat?, bottom: CGFloat?, left: CGFloat?)
+        -> (topConstraint: NSLayoutConstraint?, rightConstraint: NSLayoutConstraint?, bottomConstraint: NSLayoutConstraint?, leftConstraint: NSLayoutConstraint?)
+    {
+        var topConstraint: NSLayoutConstraint?
+        var bottomConstraint: NSLayoutConstraint?
+        var rightConstraint: NSLayoutConstraint?
+        var leftConstraint: NSLayoutConstraint?
+        if let topDistance = top {
+            topConstraint = NSLayoutConstraint(item: item, attribute: .top, relatedBy: .equal, toItem: toItem, attribute: .top, multiplier: 1, constant: topDistance)
+        }
+        if let bottomDistance = bottom {
+            bottomConstraint = NSLayoutConstraint(item: item, attribute: .bottom, relatedBy: .equal, toItem: toItem, attribute: .bottom, multiplier: 1, constant: bottomDistance)
+        }
+        if let rightDistance = right {
+            rightConstraint = NSLayoutConstraint(item: item, attribute: .right, relatedBy: .equal, toItem: toItem, attribute: .right, multiplier: 1, constant: rightDistance)
+        }
+        if let leftDistance = left {
+            leftConstraint = NSLayoutConstraint(item: item, attribute: .left, relatedBy: .equal, toItem: toItem, attribute: .left, multiplier: 1, constant: leftDistance)
+        }
+
+        return (topConstraint, rightConstraint, bottomConstraint, leftConstraint)
+    }
 }
