@@ -15,15 +15,16 @@ import Cocoa
 
 class TextEditorViewController: NSViewController {
 
-    var textField: NSTextField?
+    var textView : NSTextView?
 
     override func loadView() {
         self.view = TextEditorView()
         self.view.wantsLayer = true
-        textField = NSTextField()
-        textField?.backgroundColor = NSColor.black
-        textField?.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(textField!)
+        textView = NSTextView()
+        textView?.backgroundColor = NSColor(calibratedRed: 0.522, green: 0.596, blue: 0.110, alpha: 1.00)
+        textView?.translatesAutoresizingMaskIntoConstraints = false
+        textView?.focusRingType = .none
+        self.view.addSubview(textView!)
     }
 
     override func viewDidLoad() {
@@ -34,16 +35,16 @@ class TextEditorViewController: NSViewController {
     }
 
     private func addConstraints() {
-        guard let textField = textField else { return }
+        guard let textView = textView else { return }
 
         let heightMultiplier = EditorLayoutConstants.MIN_TEXT_FIELD_HEIGHT_MULTIPLIER
         let widthMultiplier = EditorLayoutConstants.MIN_TEXT_FIELD_WIDTH_MULTIPLIER
 
-        let textFieldSizeConstraints = LayoutUtils.setSizeConstraint(item: textField,
+        let textViewSizeConstraints = LayoutUtils.setSizeConstraint(item: textView,
                                                                      minWidth: self.view.frame.width * heightMultiplier,
                                                                      minHeight: self.view.frame.height * widthMultiplier)
 
-        let textFieldLocationConstraints = LayoutUtils.setDistanceConstraints(item: textField,
+        let textViewLocationConstraints = LayoutUtils.setDistanceConstraints(item: textView,
                                                                               toItem: self.view,
                                                                               top: self.view.frame.height*(1 - heightMultiplier)/2,
                                                                               right: self.view.frame.width*(1 - widthMultiplier)/2,
@@ -51,11 +52,11 @@ class TextEditorViewController: NSViewController {
                                                                               left: self.view.frame.width*(1 - widthMultiplier)/2,
                                                                               relatedBy: .lessThanOrEqual)
 
-        let textFieldCenteringConstraints = LayoutUtils.center(item: textField, inItem: self.view)
-        
-        NSLayoutConstraint.activate([textFieldSizeConstraints.heightConstraint, textFieldSizeConstraints.widthConstraint,
-                                     textFieldLocationConstraints.bottomConstraint!, textFieldLocationConstraints.leftConstraint!,
-                                     textFieldLocationConstraints.rightConstraint!, textFieldLocationConstraints.topConstraint!,
-                                     textFieldCenteringConstraints.horizontalConstraint, textFieldCenteringConstraints.verticalConstraint])
+        let textViewCenteringConstraints = LayoutUtils.center(item: textView, inItem: self.view)
+
+        NSLayoutConstraint.activate([textViewSizeConstraints.heightConstraint, textViewSizeConstraints.widthConstraint,
+                                     textViewLocationConstraints.bottomConstraint!, textViewLocationConstraints.leftConstraint!,
+                                     textViewLocationConstraints.rightConstraint!, textViewLocationConstraints.topConstraint!,
+                                     textViewCenteringConstraints.horizontalConstraint, textViewCenteringConstraints.verticalConstraint])
     }
 }
