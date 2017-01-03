@@ -13,7 +13,7 @@ class TextEditorView: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
-        NSColor.white.setFill()
+        NSColor(calibratedRed: 0.514, green: 0.580, blue: 0.588, alpha: 1.00).setFill()
         NSRectFill(dirtyRect)
     }
 }
