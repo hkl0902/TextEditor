@@ -13,7 +13,7 @@ class SideFolderView: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
-        NSColor.blue.setFill()
+        NSColor(calibratedRed: 0.788, green: 0.298, blue: 0.133, alpha: 1.00).setFill()
         NSRectFill(dirtyRect)
     }
     
