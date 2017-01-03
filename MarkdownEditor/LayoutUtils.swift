@@ -22,9 +22,9 @@ struct EditorLayoutConstants {
     static var MIN_TEXT_EDITOR_VIEW_HEIGHT: CGFloat = 1000
 
     // Percentage of the current field
-    static var MIN_TEXT_FIELD_WIDTH_MULTIPLIER: CGFloat = 0.5
+    static var MIN_TEXT_FIELD_WIDTH_MULTIPLIER: CGFloat = 0.9
     static var MAX_TEXT_FIELD_WIDTH_MULTIPLIER: CGFloat = 0.8
-    static var MIN_TEXT_FIELD_HEIGHT_MULTIPLIER: CGFloat = 0.5
+    static var MIN_TEXT_FIELD_HEIGHT_MULTIPLIER: CGFloat = 0.9
     static var MAX_TEXT_FIELD_HEIGHT_MULTIPLIER: CGFloat = 0.8
     
     static var MIN_SIDE_FOLDER_VIEW_WIDTH: CGFloat = 500    // When visible
@@ -108,6 +108,19 @@ struct LayoutUtils {
     static func setDistanceConstraints(item: Any, toItem: Any, maxTop: CGFloat?, maxRight: CGFloat?, maxBottom: CGFloat?, maxLeft: CGFloat?)
         -> (topConstraint: NSLayoutConstraint?, rightConstraint: NSLayoutConstraint?, bottomConstraint: NSLayoutConstraint?, leftConstraint: NSLayoutConstraint?) {
             return setDistanceConstraints(item: item, toItem: toItem, top: maxTop, right: maxRight, bottom: maxBottom, left: maxLeft, relatedBy: .lessThanOrEqual)
+    }
+    
+    static func center(item: Any, inItem: Any)
+        -> (horizontalConstraint: NSLayoutConstraint, verticalConstraint: NSLayoutConstraint) {
+        let horizontalConstraint = NSLayoutConstraint(item: item,
+                                                      attribute: .centerX,
+                                                      relatedBy: .equal,
+                                                      toItem: inItem,
+                                                      attribute: .centerX,
+                                                      multiplier: 1,
+                                                      constant: 0)
+        let verticalConstraint = NSLayoutConstraint(item: item, attribute: .centerY, relatedBy: .equal, toItem: inItem, attribute: .centerY, multiplier: 1, constant: 0)
+        return (horizontalConstraint, verticalConstraint)
     }
 }
 

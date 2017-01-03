@@ -51,8 +51,11 @@ class TextEditorViewController: NSViewController {
                                                                               left: self.view.frame.width*(1 - widthMultiplier)/2,
                                                                               relatedBy: .lessThanOrEqual)
 
+        let textFieldCenteringConstraints = LayoutUtils.center(item: textField, inItem: self.view)
+        
         NSLayoutConstraint.activate([textFieldSizeConstraints.heightConstraint, textFieldSizeConstraints.widthConstraint,
                                      textFieldLocationConstraints.bottomConstraint!, textFieldLocationConstraints.leftConstraint!,
-                                     textFieldLocationConstraints.rightConstraint!, textFieldLocationConstraints.topConstraint!])
+                                     textFieldLocationConstraints.rightConstraint!, textFieldLocationConstraints.topConstraint!,
+                                     textFieldCenteringConstraints.horizontalConstraint, textFieldCenteringConstraints.verticalConstraint])
     }
 }
