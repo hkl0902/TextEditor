@@ -16,7 +16,7 @@ import Cocoa
 class TextEditorViewController: NSViewController {
 
     var textField: NSTextField?
-    
+
     override func loadView() {
         self.view = TextEditorView()
         self.view.wantsLayer = true
@@ -25,21 +25,32 @@ class TextEditorViewController: NSViewController {
         textField?.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(textField!)
     }
-    
+
     override func viewDidLoad() {
     }
-    
+
     override func viewWillLayout() {
         addConstraints()
     }
-    
+
     private func addConstraints() {
         guard let textField = textField else { return }
-        //TODO: Get rid of magic numbers
-        let textFieldSizeConstraints = LayoutUtils.setSizeConstraint(item: textField, minWidth: self.view.frame.width/2, minHeight: self.view.frame.height * 0.8)
-        
-        let textFieldLocationConstraints = LayoutUtils.setDistanceConstraints(item: textField, toItem: self.view, top: self.view.frame.height*0.1, right: self.view.frame.width*0.25, bottom: self.view.frame.height*0.1, left: self.view.frame.width*0.25, relatedBy: .lessThanOrEqual)
-        
+
+        let heightMultiplier = EditorLayoutConstants.MIN_TEXT_FIELD_HEIGHT_MULTIPLIER
+        let widthMultiplier = EditorLayoutConstants.MIN_TEXT_FIELD_WIDTH_MULTIPLIER
+
+        let textFieldSizeConstraints = LayoutUtils.setSizeConstraint(item: textField,
+                                                                     minWidth: self.view.frame.width * heightMultiplier,
+                                                                     minHeight: self.view.frame.height * widthMultiplier)
+
+        let textFieldLocationConstraints = LayoutUtils.setDistanceConstraints(item: textField,
+                                                                              toItem: self.view,
+                                                                              top: self.view.frame.height*(1 - heightMultiplier)/2,
+                                                                              right: self.view.frame.width*(1 - widthMultiplier)/2,
+                                                                              bottom: self.view.frame.height*(1 - heightMultiplier)/2,
+                                                                              left: self.view.frame.width*(1 - widthMultiplier)/2,
+                                                                              relatedBy: .lessThanOrEqual)
+
         NSLayoutConstraint.activate([textFieldSizeConstraints.heightConstraint, textFieldSizeConstraints.widthConstraint,
                                      textFieldLocationConstraints.bottomConstraint!, textFieldLocationConstraints.leftConstraint!,
                                      textFieldLocationConstraints.rightConstraint!, textFieldLocationConstraints.topConstraint!])

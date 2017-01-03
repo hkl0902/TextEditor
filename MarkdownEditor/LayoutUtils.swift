@@ -21,6 +21,12 @@ struct EditorLayoutConstants {
     static var MIN_TEXT_EDITOR_VIEW_WIDTH: CGFloat = 500
     static var MIN_TEXT_EDITOR_VIEW_HEIGHT: CGFloat = 1000
 
+    // Percentage of the current field
+    static var MIN_TEXT_FIELD_WIDTH_MULTIPLIER: CGFloat = 0.5
+    static var MAX_TEXT_FIELD_WIDTH_MULTIPLIER: CGFloat = 0.8
+    static var MIN_TEXT_FIELD_HEIGHT_MULTIPLIER: CGFloat = 0.5
+    static var MAX_TEXT_FIELD_HEIGHT_MULTIPLIER: CGFloat = 0.8
+    
     static var MIN_SIDE_FOLDER_VIEW_WIDTH: CGFloat = 500    // When visible
     static var MIN_SIDE_FOLDER_VIEW_HEIGHT: CGFloat = 1000  // When visible
 
