@@ -16,5 +16,4 @@ class TextEditorView: NSView {
         NSColor.white.setFill()
         NSRectFill(dirtyRect)
     }
-    
 }
