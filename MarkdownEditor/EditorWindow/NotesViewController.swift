@@ -14,10 +14,31 @@
 
 import Cocoa
 
-class NotesViewController: NSViewController, NSTableViewDelegate {
+class NotesViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
+    var tableView: NotesTableView!
+    
     override func loadView() {
-        self.view = NotesTableView()
-        self.view.wantsLayer = true
+        tableView = NotesTableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.view = tableView
+    }
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return 13
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        print("Hello")
+        return view
+    }
+    
+    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
+        let view = NSTableRowView()
+        view.addSubview(NSButton(title: "\(row)", target: nil, action: nil))
+        return view
     }
 }
+
+
