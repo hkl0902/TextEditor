@@ -11,8 +11,39 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     let editorWindowController = EditorWindowController()
+    let createMore = false
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        if (createMore) {
+            DispatchQueue.main.async { [unowned self] in
+                for i in 0..<5 {
+                    let note = Note(context: self.managedObjectContext)
+                    note.lastModified = Date() as NSDate?
+                    note.path = "path: \(i)"
+                    note.tags = "tags: \(i)"
+                    note.text = "text: \(i) + \(i)"
+                    note.id = UUID.init().description
+                }
+            }
+        }
+        let request = Note.createFetchRequest()
+        /**
+        do {
+            let allNotes = try? self.managedObjectContext.fetch(request)
+            for note in allNotes! {
+                self.managedObjectContext.delete(note)
+            }
+        } catch let error as NSError {
+            print(error)
+        }
+         */
+        do {
+            if let notes = try? self.managedObjectContext.fetch(request) {
+                for note in notes {
+                    print(note.tags ?? "")
+                }
+            }
+        }
         editorWindowController.showWindow(self)
     }
 

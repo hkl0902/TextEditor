@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		470517561E1F29060060129F /* MarkdownEditor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 470517541E1F29060060129F /* MarkdownEditor.xcdatamodeld */; };
+		470517661E1F2D950060129F /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470517641E1F2D950060129F /* Note+CoreDataClass.swift */; };
+		470517671E1F2D950060129F /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470517651E1F2D950060129F /* Note+CoreDataProperties.swift */; };
 		47278B921E18521400E5E529 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278B911E18521400E5E529 /* main.swift */; };
 		47278B941E18521400E5E529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47278B931E18521400E5E529 /* Assets.xcassets */; };
 		47278BA21E18521400E5E529 /* MarkdownEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278BA11E18521400E5E529 /* MarkdownEditorTests.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		470517551E1F29060060129F /* MarkdownEditor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarkdownEditor.xcdatamodel; sourceTree = "<group>"; };
+		470517641E1F2D950060129F /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		470517651E1F2D950060129F /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		47278B8E1E18521400E5E529 /* MarkdownEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkdownEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47278B911E18521400E5E529 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		47278B931E18521400E5E529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +96,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		470517571E1F29B60060129F /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				470517641E1F2D950060129F /* Note+CoreDataClass.swift */,
+				470517651E1F2D950060129F /* Note+CoreDataProperties.swift */,
+				470517541E1F29060060129F /* MarkdownEditor.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		47278B851E18521400E5E529 = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +129,7 @@
 		47278B901E18521400E5E529 /* MarkdownEditor */ = {
 			isa = PBXGroup;
 			children = (
-				470517541E1F29060060129F /* MarkdownEditor.xcdatamodeld */,
+				470517571E1F29B60060129F /* Core Data */,
 				47821D731E1A22E90009F3DC /* Editor Window */,
 				47278B911E18521400E5E529 /* main.swift */,
 				47278BBA1E18527E00E5E529 /* AppMainMenu.swift */,
@@ -296,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47821D7B1E1A23490009F3DC /* SideFolderViewController.swift in Sources */,
+				470517661E1F2D950060129F /* Note+CoreDataClass.swift in Sources */,
 				47278B921E18521400E5E529 /* main.swift in Sources */,
 				47821D7D1E1A235E0009F3DC /* NotesViewController.swift in Sources */,
 				478446671E1AE585000FA47E /* LayoutUtils.swift in Sources */,
@@ -308,6 +323,7 @@
 				47821D7F1E1A236E0009F3DC /* TextEditorView.swift in Sources */,
 				47821D851E1A23B00009F3DC /* EditorWindow.swift in Sources */,
 				47821D831E1A237F0009F3DC /* NotesTableView.swift in Sources */,
+				470517671E1F2D950060129F /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
