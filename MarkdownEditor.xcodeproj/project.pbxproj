@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470517561E1F29060060129F /* MarkdownEditor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 470517541E1F29060060129F /* MarkdownEditor.xcdatamodeld */; };
 		47278B921E18521400E5E529 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278B911E18521400E5E529 /* main.swift */; };
 		47278B941E18521400E5E529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47278B931E18521400E5E529 /* Assets.xcassets */; };
 		47278BA21E18521400E5E529 /* MarkdownEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47278BA11E18521400E5E529 /* MarkdownEditorTests.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		470517551E1F29060060129F /* MarkdownEditor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarkdownEditor.xcdatamodel; sourceTree = "<group>"; };
 		47278B8E1E18521400E5E529 /* MarkdownEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkdownEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47278B911E18521400E5E529 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		47278B931E18521400E5E529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		47278B901E18521400E5E529 /* MarkdownEditor */ = {
 			isa = PBXGroup;
 			children = (
+				470517541E1F29060060129F /* MarkdownEditor.xcdatamodeld */,
 				47821D731E1A22E90009F3DC /* Editor Window */,
 				47278B911E18521400E5E529 /* main.swift */,
 				47278BBA1E18527E00E5E529 /* AppMainMenu.swift */,
@@ -300,6 +303,7 @@
 				47821D871E1A23D90009F3DC /* EditorViewController.swift in Sources */,
 				47278BBB1E18527E00E5E529 /* AppMainMenu.swift in Sources */,
 				47821D791E1A23380009F3DC /* EditorWindowController.swift in Sources */,
+				470517561E1F29060060129F /* MarkdownEditor.xcdatamodeld in Sources */,
 				47821D781E1A23380009F3DC /* TextEditorViewController.swift in Sources */,
 				47821D7F1E1A236E0009F3DC /* TextEditorView.swift in Sources */,
 				47821D851E1A23B00009F3DC /* EditorWindow.swift in Sources */,
@@ -559,6 +563,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		470517541E1F29060060129F /* MarkdownEditor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				470517551E1F29060060129F /* MarkdownEditor.xcdatamodel */,
+			);
+			currentVersion = 470517551E1F29060060129F /* MarkdownEditor.xcdatamodel */;
+			path = MarkdownEditor.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 47278B861E18521400E5E529 /* Project object */;
 }
