@@ -11,15 +11,15 @@ import Cocoa
 class EditorViewController: NSViewController, NSStackViewDelegate {
 
     var sideFolderViewController: NSViewController!
-    var notesViewController: NSViewController!
+    //var notesViewController: NSViewController!
     var textEditorViewController: NSViewController!
     
     override func loadView() {
         sideFolderViewController = SideFolderViewController()
-        notesViewController = NotesViewController()
+        //notesViewController = NotesViewController()
         textEditorViewController = TextEditorViewController()
         
-        let stackView = NSStackView(views: [sideFolderViewController.view, notesViewController.view, textEditorViewController.view])
+        let stackView = NSStackView(views: [sideFolderViewController.view, textEditorViewController.view])
         stackView.spacing = 0
         stackView.distribution = .fill
         self.view = stackView
@@ -32,9 +32,9 @@ class EditorViewController: NSViewController, NSStackViewDelegate {
                                                                   minWidth: EditorLayoutConstants.MIN_SIDE_FOLDER_VIEW_WIDTH,
                                                                   minHeight: EditorLayoutConstants.MIN_SIDE_FOLDER_VIEW_HEIGHT)
         // Notes View
-        let notesViewConstraints = LayoutUtils.setSizeConstraint(item: self.notesViewController.view,
-                                                                 minWidth: EditorLayoutConstants.MIN_NOTES_VIEW_WIDTH,
-                                                                 minHeight: EditorLayoutConstants.MIN_NOTES_VIEW_HEIGHT)
+        //let notesViewConstraints = LayoutUtils.setSizeConstraint(item: self.notesViewController.view,
+        //                                                         minWidth: EditorLayoutConstants.MIN_NOTES_VIEW_WIDTH,
+        //                                                         minHeight: EditorLayoutConstants.MIN_NOTES_VIEW_HEIGHT)
         // Text Editor View
         let textEditorViewConstraints = LayoutUtils.setSizeConstraint(item: self.textEditorViewController.view,
                                                                       minWidth: EditorLayoutConstants.MIN_TEXT_EDITOR_VIEW_WIDTH,
@@ -42,7 +42,7 @@ class EditorViewController: NSViewController, NSStackViewDelegate {
 
         
         NSLayoutConstraint.activate([sideFolderViewConstraints.heightConstraint, sideFolderViewConstraints.widthConstraint,
-                                     notesViewConstraints.heightConstraint, notesViewConstraints.widthConstraint, 
+                                     //notesViewConstraints.heightConstraint, notesViewConstraints.widthConstraint,
                                      textEditorViewConstraints.heightConstraint, textEditorViewConstraints.widthConstraint])
     }
 }
