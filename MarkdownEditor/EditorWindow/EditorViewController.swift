@@ -45,4 +45,21 @@ class EditorViewController: NSViewController, NSStackViewDelegate {
                                      //notesViewConstraints.heightConstraint, notesViewConstraints.widthConstraint,
                                      textEditorViewConstraints.heightConstraint, textEditorViewConstraints.widthConstraint])
     }
+    
+    /* Opens a file the user chooses out of the NSOpenPanel
+     */
+    @objc public func openFile() {
+        let panel = NSOpenPanel()
+        panel.allowedFileTypes = ["txt"]
+        panel.directoryURL = URL(fileURLWithPath: "/Users/hyunkyu/Pictures")
+        panel.begin() { [unowned self] in
+            if $0 == NSFileHandlingPanelOKButton {
+                let theDoc = panel.urls[0]
+                if let tevc = self.textEditorViewController as? TextEditorViewController {
+                    let mutableString = tevc.textView?.textStorage?.mutableString
+                    mutableString?.replaceCharacters(in: NSRange(location: 0, length: mutableString!.length), with: theDoc.absoluteString)
+                }
+            }
+        }
+    }
 }
